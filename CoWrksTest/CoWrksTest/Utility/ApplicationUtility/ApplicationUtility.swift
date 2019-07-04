@@ -19,8 +19,8 @@ class ApplicationUtility: NSObject {
     func renderHomeScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let sideMenu = storyboard.instantiateViewController(withIdentifier: "SideMenu")
-        let homescreen = storyboard.instantiateViewController(withIdentifier: "HomeScreen")
-        revealController = SWRevealViewController(rearViewController: sideMenu, frontViewController: homescreen)
+        let homeParent = storyboard.instantiateViewController(withIdentifier: "HomeParent")
+        revealController = SWRevealViewController(rearViewController: sideMenu, frontViewController: homeParent)
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = revealController
         appDelegate.window?.makeKeyAndVisible()

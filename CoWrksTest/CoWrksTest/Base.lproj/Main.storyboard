@@ -6,42 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="HomeScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z26-RC-DyH">
-                                <rect key="frame" x="25" y="20" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="8ZR-p0-vQL"/>
-                                    <constraint firstAttribute="height" constant="30" id="mc0-z3-ut7"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="hamburgerTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXh-Ug-6Y5"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="z26-RC-DyH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="F96-E4-YC5"/>
-                            <constraint firstItem="z26-RC-DyH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iBJ-Xk-6i8"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1026" y="385"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="N5Q-la-E8V">
             <objects>
@@ -67,12 +37,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y67-Dg-WNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="385"/>
+            <point key="canvasLocation" x="-2070" y="340"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="dvu-zE-EUM">
             <objects>
-                <viewController storyboardIdentifier="SideMenu" id="5ie-xU-MU0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenu" id="5ie-xU-MU0" customClass="SideMenuViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67S-X0-kGJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +52,165 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H60-9f-5lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="385"/>
+            <point key="canvasLocation" x="-1396" y="340"/>
+        </scene>
+        <!--Home Parent View Controller-->
+        <scene sceneID="4ei-hc-ZkT">
+            <objects>
+                <viewController storyboardIdentifier="HomeParent" id="10W-Hx-nev" customClass="HomeParentViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhb-hh-Irx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-gK-fZ1">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <connections>
+                                    <segue destination="PkL-qL-lRw" kind="embed" id="kUY-jA-ooc"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-2t-z2Q" userLabel="top view">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-cw-USA">
+                                        <rect key="frame" x="8" y="35" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Usy-cw-USA" secondAttribute="height" multiplier="23:15" id="Vhj-jE-JS3"/>
+                                        </constraints>
+                                        <state key="normal" image="hamburger"/>
+                                        <connections>
+                                            <action selector="hamburgerTappedWithSender:" destination="10W-Hx-nev" eventType="touchUpInside" id="6mI-qm-f9t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Usy-cw-USA" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="0LE-Aa-zrc"/>
+                                    <constraint firstItem="Usy-cw-USA" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.3" id="4Np-Jf-mfA"/>
+                                    <constraint firstItem="Usy-cw-USA" firstAttribute="leading" secondItem="PC8-2t-z2Q" secondAttribute="leading" constant="8" id="Wli-P3-Vvm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="0Zl-jd-pVu"/>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="height" secondItem="bhb-hh-Irx" secondAttribute="height" multiplier="0.85" id="2ml-Ez-2gR"/>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="top" secondItem="PC8-2t-z2Q" secondAttribute="bottom" id="5GI-zN-rme"/>
+                            <constraint firstItem="PC8-2t-z2Q" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="7Ft-iY-ANY"/>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="bottom" secondItem="6l1-Hs-Vbc" secondAttribute="bottom" id="FnM-KW-HG4"/>
+                            <constraint firstItem="PC8-2t-z2Q" firstAttribute="top" secondItem="bhb-hh-Irx" secondAttribute="top" id="mxW-E1-Qkr"/>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="qGP-rF-6bi"/>
+                            <constraint firstItem="PC8-2t-z2Q" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="quh-bs-Kit"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6l1-Hs-Vbc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FX-oM-Vx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709.60000000000002" y="339.58020989505252"/>
+        </scene>
+        <!--MESSAGES-->
+        <scene sceneID="Rqz-f2-R85">
+            <objects>
+                <viewController id="C7g-85-DeB" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcp-WK-WNw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="nFv-eH-BOv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MESSAGES" id="ksC-S4-I4W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mz-fW-5HN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-169"/>
+        </scene>
+        <!--SOCIAL-->
+        <scene sceneID="s9o-AS-v6p">
+            <objects>
+                <viewController id="Xz1-YZ-Mib" customClass="ArticleViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJB-jH-vOU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.1450980392" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Hc2-cc-BOS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SOCIAL" id="Yvk-2k-m7p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nth-wH-iGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-784"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="owo-Iw-Tdg">
+            <objects>
+                <tabBarController id="PkL-qL-lRw" customClass="HomeViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uN4-na-5hB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Xz1-YZ-Mib" kind="relationship" relationship="viewControllers" id="d7n-BX-CCZ"/>
+                        <segue destination="C7g-85-DeB" kind="relationship" relationship="viewControllers" id="hlA-8M-5No"/>
+                        <segue destination="iE5-5S-nJV" kind="relationship" relationship="viewControllers" id="zAG-Xr-exG"/>
+                        <segue destination="TsU-Lj-2gf" kind="relationship" relationship="viewControllers" id="J3s-xv-L3r"/>
+                        <segue destination="kvy-s6-D9q" kind="relationship" relationship="viewControllers" id="NuI-K1-ee4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HI5-Q1-4TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="1085"/>
+        </scene>
+        <!--BOOKING-->
+        <scene sceneID="IHc-LK-uqv">
+            <objects>
+                <viewController id="iE5-5S-nJV" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyN-a6-WSL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="h5r-ih-XKK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BOOKING" id="Utf-3I-5sc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQY-da-268" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="1298"/>
+        </scene>
+        <!--STORE-->
+        <scene sceneID="foT-n0-jah">
+            <objects>
+                <viewController id="TsU-Lj-2gf" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hM-WX-Qkl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="uXu-gX-Re2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="STORE" id="TV1-d9-RlU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t88-Wm-0JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="572"/>
+        </scene>
+        <!--HELPDESK-->
+        <scene sceneID="awY-pA-OlP">
+            <objects>
+                <viewController id="kvy-s6-D9q" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UY3-Ah-pq1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="wrd-iZ-nOX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="HELPDESK" id="n86-0B-zj5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIu-di-h2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="2013"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="24" height="24"/>
+    </resources>
 </document>
