@@ -17,6 +17,7 @@ typealias GetFeedSuccessClosure = (_ articles: [Article]?) -> Void
 
 class WebClient : NSObject {
     
+    //Declare init as private for true singleton
     static let sharedWebClient = WebClient()
     
     func getFeed(successHandler:@escaping GetFeedSuccessClosure, failureHandler:@escaping GetFeedFailureClosure) {
