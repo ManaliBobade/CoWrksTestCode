@@ -14,6 +14,7 @@
 		980BA88822CDC8F100F932E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980BA88622CDC8F100F932E6 /* LaunchScreen.storyboard */; };
 		980BA89122CDCE7A00F932E6 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA89022CDCE7A00F932E6 /* WebClient.swift */; };
 		980BA89322CDD09300F932E6 /* WebRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA89222CDD09300F932E6 /* WebRouter.swift */; };
+		980BA89722CDD81100F932E6 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA89622CDD81100F932E6 /* Article.swift */; };
 		EB4B8959D14DB4C65A3ED2AF /* Pods_CoWrksTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5B1B2A15685EE558E40DB5 /* Pods_CoWrksTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		980BA88922CDC8F100F932E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		980BA89022CDCE7A00F932E6 /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		980BA89222CDD09300F932E6 /* WebRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRouter.swift; sourceTree = "<group>"; };
+		980BA89622CDD81100F932E6 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EE5B1B2A15685EE558E40DB5 /* Pods_CoWrksTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoWrksTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 		980BA87C22CDC8F100F932E6 /* CoWrksTest */ = {
 			isa = PBXGroup;
 			children = (
+				980BA89522CDD6BF00F932E6 /* Model */,
 				980BA88F22CDCE2000F932E6 /* Network */,
 				980BA87D22CDC8F100F932E6 /* AppDelegate.swift */,
 				980BA87F22CDC8F100F932E6 /* ViewController.swift */,
@@ -83,6 +86,14 @@
 				980BA89222CDD09300F932E6 /* WebRouter.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		980BA89522CDD6BF00F932E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				980BA89622CDD81100F932E6 /* Article.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C2AA2B6FD0B2B3EAF7614605 /* Frameworks */ = {
@@ -229,6 +240,7 @@
 				980BA89322CDD09300F932E6 /* WebRouter.swift in Sources */,
 				980BA87E22CDC8F100F932E6 /* AppDelegate.swift in Sources */,
 				980BA89122CDCE7A00F932E6 /* WebClient.swift in Sources */,
+				980BA89722CDD81100F932E6 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
