@@ -8,5 +8,6 @@ target 'CoWrksTest' do
   # Pods for CoWrksTest
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
+  pod 'XLPagerTabStrip'
 
 end

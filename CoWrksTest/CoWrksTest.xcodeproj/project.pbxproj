@@ -17,10 +17,13 @@
 		980BA89D22CDF87E00F932E6 /* ApplicationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA89C22CDF87E00F932E6 /* ApplicationUtility.swift */; };
 		980BA8A122CDFBA100F932E6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A022CDFBA100F932E6 /* SWRevealViewController.m */; };
 		980BA8A322CE044E00F932E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A222CE044E00F932E6 /* HomeViewController.swift */; };
-		980BA8A722CE087100F932E6 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A622CE087100F932E6 /* ArticleViewController.swift */; };
+		980BA8A722CE087100F932E6 /* ArticleParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A622CE087100F932E6 /* ArticleParentViewController.swift */; };
 		980BA8A922CE08F100F932E6 /* OtherTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */; };
 		980BA8AB22CE0A6200F932E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */; };
 		980BA8AD22CE10D500F932E6 /* HomeParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */; };
+		9854D44722CF17F000AA7F62 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */; };
+		9854D44A22CF257300AA7F62 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44922CF257300AA7F62 /* EventsViewController.swift */; };
+		9854D44C22CF258500AA7F62 /* MyCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */; };
 		EB4B8959D14DB4C65A3ED2AF /* Pods_CoWrksTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5B1B2A15685EE558E40DB5 /* Pods_CoWrksTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +44,13 @@
 		980BA89F22CDFBA000F932E6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		980BA8A022CDFBA100F932E6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		980BA8A222CE044E00F932E6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		980BA8A622CE087100F932E6 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		980BA8A622CE087100F932E6 /* ArticleParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleParentViewController.swift; sourceTree = "<group>"; };
 		980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTabsViewController.swift; sourceTree = "<group>"; };
 		980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParentViewController.swift; sourceTree = "<group>"; };
+		9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		9854D44922CF257300AA7F62 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCenterViewController.swift; sourceTree = "<group>"; };
 		EE5B1B2A15685EE558E40DB5 /* Pods_CoWrksTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoWrksTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,9 +121,9 @@
 		980BA89822CDF66100F932E6 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				9854D44522CF17D000AA7F62 /* Article */,
 				980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */,
 				980BA8A222CE044E00F932E6 /* HomeViewController.swift */,
-				980BA8A622CE087100F932E6 /* ArticleViewController.swift */,
 				980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */,
 				980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */,
 			);
@@ -140,6 +146,17 @@
 				980BA89C22CDF87E00F932E6 /* ApplicationUtility.swift */,
 			);
 			path = ApplicationUtility;
+			sourceTree = "<group>";
+		};
+		9854D44522CF17D000AA7F62 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				980BA8A622CE087100F932E6 /* ArticleParentViewController.swift */,
+				9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */,
+				9854D44922CF257300AA7F62 /* EventsViewController.swift */,
+				9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */,
+			);
+			path = Article;
 			sourceTree = "<group>";
 		};
 		C2AA2B6FD0B2B3EAF7614605 /* Frameworks */ = {
@@ -285,13 +302,16 @@
 			files = (
 				980BA8AD22CE10D500F932E6 /* HomeParentViewController.swift in Sources */,
 				980BA8A122CDFBA100F932E6 /* SWRevealViewController.m in Sources */,
-				980BA8A722CE087100F932E6 /* ArticleViewController.swift in Sources */,
+				980BA8A722CE087100F932E6 /* ArticleParentViewController.swift in Sources */,
 				980BA89322CDD09300F932E6 /* WebRouter.swift in Sources */,
 				980BA87E22CDC8F100F932E6 /* AppDelegate.swift in Sources */,
 				980BA8A922CE08F100F932E6 /* OtherTabsViewController.swift in Sources */,
 				980BA89122CDCE7A00F932E6 /* WebClient.swift in Sources */,
+				9854D44A22CF257300AA7F62 /* EventsViewController.swift in Sources */,
 				980BA89722CDD81100F932E6 /* Article.swift in Sources */,
 				980BA8A322CE044E00F932E6 /* HomeViewController.swift in Sources */,
+				9854D44722CF17F000AA7F62 /* ArticlesViewController.swift in Sources */,
+				9854D44C22CF258500AA7F62 /* MyCenterViewController.swift in Sources */,
 				980BA8AB22CE0A6200F932E6 /* SideMenuViewController.swift in Sources */,
 				980BA89D22CDF87E00F932E6 /* ApplicationUtility.swift in Sources */,
 			);

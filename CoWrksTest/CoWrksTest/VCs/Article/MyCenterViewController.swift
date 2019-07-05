@@ -1,14 +1,15 @@
 //
-//  ArticleViewController.swift
+//  MyCenterViewController.swift
 //  CoWrksTest
 //
-//  Created by Manali Bobade on 04/07/19.
+//  Created by Manali Bobade on 05/07/19.
 //  Copyright © 2019 Manali Bobade. All rights reserved.
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class ArticleViewController: UIViewController {
+class MyCenterViewController: UIViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,12 @@ class ArticleViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - IndicatorInfoProvider
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "MY CENTER")
     }
     
 

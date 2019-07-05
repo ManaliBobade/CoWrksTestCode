@@ -4,16 +4,19 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
   - ObjectMapper (3.1.0)
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
+  - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 89a5955083ea9838e44ffc20fbf14cb60a387c6e
+PODFILE CHECKSUM: 065271d4d4bf23b327a23286b310bce8d0515727
 
 COCOAPODS: 1.2.1
