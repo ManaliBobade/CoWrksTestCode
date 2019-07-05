@@ -80,16 +80,16 @@
                                         <state key="normal" image="bell"/>
                                     </button>
                                     <searchBar userInteractionEnabled="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="CoWrks Ecoworld" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-xo-hnp">
-                                        <rect key="frame" x="43.666666666666657" y="-4" width="292.66666666666674" height="56"/>
+                                        <rect key="frame" x="58.666666666666657" y="-4" width="257.66666666666674" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="3m0-pY-evt"/>
-                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="leading" secondItem="Sky-El-miA" secondAttribute="trailing" constant="-15" id="ETb-eD-diM"/>
+                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="leading" secondItem="Sky-El-miA" secondAttribute="trailing" id="ETb-eD-diM"/>
                                     <constraint firstItem="VrW-6r-xgy" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="MOg-dm-vgB"/>
-                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="leading" secondItem="5Sb-xo-hnp" secondAttribute="trailing" constant="-20" id="Nc2-pg-057"/>
+                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="leading" secondItem="5Sb-xo-hnp" secondAttribute="trailing" id="Nc2-pg-057"/>
                                     <constraint firstAttribute="trailing" secondItem="VrW-6r-xgy" secondAttribute="trailing" id="SLx-iM-qnN"/>
                                     <constraint firstItem="Sky-El-miA" firstAttribute="leading" secondItem="PC8-2t-z2Q" secondAttribute="leading" id="Wpd-Gv-v7F"/>
                                     <constraint firstItem="5Sb-xo-hnp" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="Zmi-Ao-n8R"/>
