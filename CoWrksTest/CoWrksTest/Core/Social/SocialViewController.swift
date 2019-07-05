@@ -42,8 +42,8 @@ extension PagerStrip {
             newCell?.label.textColor = .white
         }
         
-        settings.style.buttonBarBackgroundColor = UIColor(red: 21/255.0, green: 21/255.0, blue: 24/255.0, alpha: 1.0)
-        settings.style.buttonBarItemBackgroundColor = UIColor(red: 21/255.0, green: 21/255.0, blue: 24/255.0, alpha: 1.0)
+        settings.style.buttonBarBackgroundColor = UIColor.clear
+        settings.style.buttonBarItemBackgroundColor = UIColor.clear
         settings.style.selectedBarBackgroundColor = UIColor(red: 33/255.0, green: 174/255.0, blue: 67/255.0, alpha: 1.0)
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 16)
         settings.style.selectedBarHeight = 3.0

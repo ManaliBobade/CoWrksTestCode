@@ -30,12 +30,12 @@ extension TableView {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "Article")
-        cell.contentView.backgroundColor = UIColor.red
+        cell.contentView.backgroundColor = UIColor.white
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130.0
+        return 45.0
     }
     
 }

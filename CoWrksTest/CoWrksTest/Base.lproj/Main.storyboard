@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GMR-hf-bVH">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="GMR-hf-bVH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AL6-6w-sTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-mj-6bd">
-                                <rect key="frame" x="119" y="319" width="136" height="29"/>
+                                <rect key="frame" x="119.66666666666669" y="391.66666666666669" width="136" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
             <objects>
                 <viewController storyboardIdentifier="SideMenu" id="5ie-xU-MU0" customClass="SideMenuViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="67S-X0-kGJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.1450980392" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="1JM-LV-TVC"/>
@@ -59,61 +59,99 @@
             <objects>
                 <viewController storyboardIdentifier="HomeParent" id="10W-Hx-nev" customClass="HomeParentViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bhb-hh-Irx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-2t-z2Q" userLabel="top view">
+                                <rect key="frame" x="0.0" y="44" width="375" height="48.666666666666657"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sky-El-miA" userLabel="hamburger">
+                                        <rect key="frame" x="0.0" y="2" width="58.666666666666664" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Sky-El-miA" secondAttribute="height" multiplier="4:3" id="3P0-dW-3V7"/>
+                                        </constraints>
+                                        <state key="normal" image="hamburger"/>
+                                        <connections>
+                                            <action selector="hamburgerTappedWithSender:" destination="10W-Hx-nev" eventType="touchUpInside" id="quh-k6-60R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-6r-xgy" userLabel="bell">
+                                        <rect key="frame" x="316.33333333333331" y="3" width="58.666666666666686" height="44"/>
+                                        <state key="normal" image="bell"/>
+                                    </button>
+                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="CoWrks Ecoworld" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-xo-hnp">
+                                        <rect key="frame" x="43.666666666666657" y="-4" width="292.66666666666674" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="3m0-pY-evt"/>
+                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="leading" secondItem="Sky-El-miA" secondAttribute="trailing" constant="-15" id="ETb-eD-diM"/>
+                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="MOg-dm-vgB"/>
+                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="leading" secondItem="5Sb-xo-hnp" secondAttribute="trailing" constant="-20" id="Nc2-pg-057"/>
+                                    <constraint firstAttribute="trailing" secondItem="VrW-6r-xgy" secondAttribute="trailing" id="SLx-iM-qnN"/>
+                                    <constraint firstItem="Sky-El-miA" firstAttribute="leading" secondItem="PC8-2t-z2Q" secondAttribute="leading" id="Wpd-Gv-v7F"/>
+                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="Zmi-Ao-n8R"/>
+                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.9" id="brr-FO-XAX"/>
+                                    <constraint firstItem="Sky-El-miA" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.9" id="hNl-kY-dfM"/>
+                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="width" secondItem="VrW-6r-xgy" secondAttribute="height" multiplier="4:3" id="hhE-it-lla"/>
+                                    <constraint firstItem="Sky-El-miA" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="rW0-12-wt4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-9M-iXw" userLabel="botom view">
+                                <rect key="frame" x="0.0" y="684" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hkD-lj-Cqt"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmz-gK-fZ1">
-                                <rect key="frame" x="0.0" y="66.5" width="375" height="600.5"/>
+                                <rect key="frame" x="0.0" y="92.666666666666686" width="375" height="685.33333333333326"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="PkL-qL-lRw" kind="embed" id="kUY-jA-ooc"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PC8-2t-z2Q" userLabel="top view">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-cw-USA">
-                                        <rect key="frame" x="8" y="13.5" width="61.5" height="40.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Usy-cw-USA" secondAttribute="height" multiplier="23:15" id="Vhj-jE-JS3"/>
-                                        </constraints>
-                                        <state key="normal" image="hamburger"/>
-                                        <connections>
-                                            <action selector="hamburgerTappedWithSender:" destination="10W-Hx-nev" eventType="touchUpInside" id="6mI-qm-f9t"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Usy-cw-USA" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="0LE-Aa-zrc"/>
-                                    <constraint firstItem="Usy-cw-USA" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.6" id="4Np-Jf-mfA"/>
-                                    <constraint firstItem="Usy-cw-USA" firstAttribute="leading" secondItem="PC8-2t-z2Q" secondAttribute="leading" constant="8" id="Wli-P3-Vvm"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rmz-gK-fZ1" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="0Zl-jd-pVu"/>
-                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="height" secondItem="bhb-hh-Irx" secondAttribute="height" multiplier="0.9" id="2ml-Ez-2gR"/>
-                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="top" secondItem="PC8-2t-z2Q" secondAttribute="bottom" id="5GI-zN-rme"/>
                             <constraint firstItem="PC8-2t-z2Q" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="7Ft-iY-ANY"/>
+                            <constraint firstAttribute="bottom" secondItem="NUI-9M-iXw" secondAttribute="bottom" id="8U7-GB-LLz"/>
+                            <constraint firstItem="6l1-Hs-Vbc" firstAttribute="top" secondItem="PC8-2t-z2Q" secondAttribute="top" id="Ch0-sK-jxe"/>
                             <constraint firstItem="rmz-gK-fZ1" firstAttribute="bottom" secondItem="6l1-Hs-Vbc" secondAttribute="bottom" id="FnM-KW-HG4"/>
-                            <constraint firstItem="PC8-2t-z2Q" firstAttribute="top" secondItem="bhb-hh-Irx" secondAttribute="top" id="mxW-E1-Qkr"/>
+                            <constraint firstItem="PC8-2t-z2Q" firstAttribute="height" secondItem="bhb-hh-Irx" secondAttribute="height" multiplier="0.06" priority="999" id="RMg-3x-uaY"/>
+                            <constraint firstItem="NUI-9M-iXw" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="RlC-hv-IEr"/>
+                            <constraint firstItem="rmz-gK-fZ1" firstAttribute="top" secondItem="PC8-2t-z2Q" secondAttribute="bottom" id="kU1-FP-Q3y"/>
+                            <constraint firstItem="NUI-9M-iXw" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="p7R-TF-c4C"/>
                             <constraint firstItem="rmz-gK-fZ1" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="qGP-rF-6bi"/>
                             <constraint firstItem="PC8-2t-z2Q" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="quh-bs-Kit"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6l1-Hs-Vbc"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="EdD-WZ-9UR" id="iYx-gp-vah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FX-oM-Vx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="EdD-WZ-9UR">
+                    <connections>
+                        <outlet property="delegate" destination="10W-Hx-nev" id="Hhl-76-OGe"/>
+                        <outlet property="searchContentsController" destination="10W-Hx-nev" id="Gox-KQ-Jof"/>
+                        <outlet property="searchResultsDataSource" destination="10W-Hx-nev" id="uNN-Kk-mNd"/>
+                        <outlet property="searchResultsDelegate" destination="10W-Hx-nev" id="fVl-DV-a00"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-709.60000000000002" y="339.58020989505252"/>
+            <point key="canvasLocation" x="-716" y="339.16256157635468"/>
         </scene>
         <!--MESSAGES-->
         <scene sceneID="Rqz-f2-R85">
             <objects>
                 <viewController id="C7g-85-DeB" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tcp-WK-WNw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="685.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nFv-eH-BOv"/>
@@ -129,14 +167,15 @@
             <objects>
                 <viewController id="Xz1-YZ-Mib" customClass="SocialViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJB-jH-vOU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="685.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-WN-CcD">
-                                <rect key="frame" x="0.0" y="35" width="375" height="516.5"/>
-                            </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-KU-PrB" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="27.333333333333332"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="gJq-NZ-NmW"/>
+                                </constraints>
                                 <inset key="scrollIndicatorInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="1" id="9X8-Ya-AXK">
                                     <size key="itemSize" width="40" height="40"/>
@@ -146,14 +185,17 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-WN-CcD">
+                                <rect key="frame" x="0.0" y="27.333333333333314" width="375" height="575"/>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OSu-KU-PrB" firstAttribute="trailing" secondItem="Hc2-cc-BOS" secondAttribute="trailing" id="K0Y-k9-FN5"/>
-                            <constraint firstItem="7RW-WN-CcD" firstAttribute="top" secondItem="OSu-KU-PrB" secondAttribute="bottom" id="Pmj-dx-UNH"/>
+                            <constraint firstItem="7RW-WN-CcD" firstAttribute="top" secondItem="OSu-KU-PrB" secondAttribute="bottom" id="azc-uh-hkW"/>
                             <constraint firstItem="OSu-KU-PrB" firstAttribute="leading" secondItem="Hc2-cc-BOS" secondAttribute="leading" id="b7L-D5-uDC"/>
+                            <constraint firstItem="OSu-KU-PrB" firstAttribute="height" secondItem="LJB-jH-vOU" secondAttribute="height" multiplier="0.04" priority="999" id="fvR-kd-X6T"/>
                             <constraint firstItem="7RW-WN-CcD" firstAttribute="leading" secondItem="Hc2-cc-BOS" secondAttribute="leading" id="mVK-wn-w8C"/>
-                            <constraint firstItem="7RW-WN-CcD" firstAttribute="height" secondItem="LJB-jH-vOU" secondAttribute="height" multiplier="0.86" id="qUK-Hj-Uwl"/>
                             <constraint firstItem="Hc2-cc-BOS" firstAttribute="bottom" secondItem="7RW-WN-CcD" secondAttribute="bottom" id="sYa-d0-bIm"/>
                             <constraint firstItem="7RW-WN-CcD" firstAttribute="trailing" secondItem="Hc2-cc-BOS" secondAttribute="trailing" id="yb4-fM-Cka"/>
                             <constraint firstItem="OSu-KU-PrB" firstAttribute="top" secondItem="LJB-jH-vOU" secondAttribute="top" id="zEC-ct-dWL"/>
@@ -177,7 +219,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uN4-na-5hB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Xz1-YZ-Mib" kind="relationship" relationship="viewControllers" id="d7n-BX-CCZ"/>
@@ -196,7 +239,7 @@
             <objects>
                 <viewController id="iE5-5S-nJV" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cyN-a6-WSL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="685.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="h5r-ih-XKK"/>
@@ -212,7 +255,7 @@
             <objects>
                 <viewController id="TsU-Lj-2gf" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7hM-WX-Qkl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="685.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="uXu-gX-Re2"/>
@@ -228,7 +271,7 @@
             <objects>
                 <viewController id="kvy-s6-D9q" customClass="OtherTabsViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UY3-Ah-pq1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="685.33333333333326"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="wrd-iZ-nOX"/>
@@ -241,6 +284,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" width="19" height="30"/>
         <image name="hamburger" width="24" height="24"/>
     </resources>
 </document>
