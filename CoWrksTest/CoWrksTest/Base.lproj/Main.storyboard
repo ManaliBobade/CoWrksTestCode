@@ -127,7 +127,7 @@
         <!--SOCIAL-->
         <scene sceneID="s9o-AS-v6p">
             <objects>
-                <viewController id="Xz1-YZ-Mib" customClass="ArticleParentViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xz1-YZ-Mib" customClass="SocialViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJB-jH-vOU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="600.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,7 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 
-class ArticleParentViewController: ButtonBarPagerTabStripViewController {
+class SocialViewController: ButtonBarPagerTabStripViewController {
     
     override func viewDidLoad() {
         setupPagerStripAppearance()
@@ -30,7 +30,7 @@ class ArticleParentViewController: ButtonBarPagerTabStripViewController {
 
 }
 
-private typealias PagerStrip = ArticleParentViewController
+private typealias PagerStrip = SocialViewController
 extension PagerStrip {
     
     func setupPagerStripAppearance() {
