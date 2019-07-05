@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				980BA89A22CDF85E00F932E6 /* Utility */,
-				980BA89822CDF66100F932E6 /* core */,
+				980BA89822CDF66100F932E6 /* Core */,
 				980BA89522CDD6BF00F932E6 /* Model */,
 				980BA88F22CDCE2000F932E6 /* Network */,
 				980BA87D22CDC8F100F932E6 /* AppDelegate.swift */,
@@ -118,16 +118,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		980BA89822CDF66100F932E6 /* core */ = {
+		980BA89822CDF66100F932E6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9854D44522CF17D000AA7F62 /* Article */,
+				9854D44522CF17D000AA7F62 /* Social */,
 				980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */,
 				980BA8A222CE044E00F932E6 /* HomeViewController.swift */,
 				980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */,
 				980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */,
 			);
-			path = core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		980BA89A22CDF85E00F932E6 /* Utility */ = {
@@ -148,7 +148,7 @@
 			path = ApplicationUtility;
 			sourceTree = "<group>";
 		};
-		9854D44522CF17D000AA7F62 /* Article */ = {
+		9854D44522CF17D000AA7F62 /* Social */ = {
 			isa = PBXGroup;
 			children = (
 				980BA8A622CE087100F932E6 /* ArticleParentViewController.swift */,
@@ -156,7 +156,7 @@
 				9854D44922CF257300AA7F62 /* EventsViewController.swift */,
 				9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */,
 			);
-			path = Article;
+			path = Social;
 			sourceTree = "<group>";
 		};
 		C2AA2B6FD0B2B3EAF7614605 /* Frameworks */ = {
