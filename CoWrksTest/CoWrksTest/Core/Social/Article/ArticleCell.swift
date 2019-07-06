@@ -11,7 +11,10 @@ import UIKit
 class ArticleCell: UITableViewCell {
 
     @IBOutlet weak var content: UILabel!
-    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var company: UILabel!
+    @IBOutlet weak var likes: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +28,10 @@ class ArticleCell: UITableViewCell {
     
     func setup(_ article: Article) {
         content.text = article.content
+        name.text = article.creator?.name
+        company.text = article.creator?.company
+        likes.isHidden = article.likes.count == 0 ? true : false
+        likes.text = article.likes.count == 1 ? "1 Like" : String(format: "%d Likes",article.likes.count)
     }
 
 }
