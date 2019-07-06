@@ -22,10 +22,10 @@ class SocialViewController: ButtonBarPagerTabStripViewController {
     
     //MARK: - PagerTabStripDataSource
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let articles = ArticlesViewController()
+        let articles = self.storyboard?.instantiateViewController(withIdentifier: "ArticlesVC")
         let events = EventsViewController()
         let myCenter = MyCenterViewController()
-        return [articles, events, myCenter]
+        return [articles!, events, myCenter]
     }
 
 }

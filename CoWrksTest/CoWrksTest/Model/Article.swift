@@ -19,12 +19,14 @@ class Article: Mappable {
         creator <- map["creator"]
         timestamp <- map["article.timelog"]
         location <- map["article.city_name"]
+        content <- map["article.content"]
     }
     
     //TODO: Ideally every article should have a unique id
     var creator: ArticleCreator?
     var timestamp: Double = 0
     var location: String?
+    var content: String?
 }
 
 class ArticleCreator: NSObject, Mappable {

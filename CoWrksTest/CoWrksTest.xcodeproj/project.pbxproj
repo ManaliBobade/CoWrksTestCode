@@ -21,6 +21,8 @@
 		980BA8A922CE08F100F932E6 /* OtherTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */; };
 		980BA8AB22CE0A6200F932E6 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */; };
 		980BA8AD22CE10D500F932E6 /* HomeParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */; };
+		98419ED922D08C7D003AB2EB /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98419ED822D08C7D003AB2EB /* ArticlesViewModel.swift */; };
+		98419EDB22D08EDD003AB2EB /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98419EDA22D08EDD003AB2EB /* ArticleCell.swift */; };
 		9854D44722CF17F000AA7F62 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */; };
 		9854D44A22CF257300AA7F62 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44922CF257300AA7F62 /* EventsViewController.swift */; };
 		9854D44C22CF258500AA7F62 /* MyCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */; };
@@ -48,6 +50,8 @@
 		980BA8A822CE08F100F932E6 /* OtherTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTabsViewController.swift; sourceTree = "<group>"; };
 		980BA8AA22CE0A6200F932E6 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		980BA8AC22CE10D500F932E6 /* HomeParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParentViewController.swift; sourceTree = "<group>"; };
+		98419ED822D08C7D003AB2EB /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		98419EDA22D08EDD003AB2EB /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		9854D44922CF257300AA7F62 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCenterViewController.swift; sourceTree = "<group>"; };
@@ -148,11 +152,21 @@
 			path = ApplicationUtility;
 			sourceTree = "<group>";
 		};
+		98419ED722D08BC4003AB2EB /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */,
+				98419ED822D08C7D003AB2EB /* ArticlesViewModel.swift */,
+				98419EDA22D08EDD003AB2EB /* ArticleCell.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		9854D44522CF17D000AA7F62 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				98419ED722D08BC4003AB2EB /* Article */,
 				980BA8A622CE087100F932E6 /* SocialViewController.swift */,
-				9854D44622CF17F000AA7F62 /* ArticlesViewController.swift */,
 				9854D44922CF257300AA7F62 /* EventsViewController.swift */,
 				9854D44B22CF258500AA7F62 /* MyCenterViewController.swift */,
 			);
@@ -300,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98419EDB22D08EDD003AB2EB /* ArticleCell.swift in Sources */,
 				980BA8AD22CE10D500F932E6 /* HomeParentViewController.swift in Sources */,
 				980BA8A122CDFBA100F932E6 /* SWRevealViewController.m in Sources */,
 				980BA8A722CE087100F932E6 /* SocialViewController.swift in Sources */,
@@ -311,6 +326,7 @@
 				980BA89722CDD81100F932E6 /* Article.swift in Sources */,
 				980BA8A322CE044E00F932E6 /* HomeViewController.swift in Sources */,
 				9854D44722CF17F000AA7F62 /* ArticlesViewController.swift in Sources */,
+				98419ED922D08C7D003AB2EB /* ArticlesViewModel.swift in Sources */,
 				9854D44C22CF258500AA7F62 /* MyCenterViewController.swift in Sources */,
 				980BA8AB22CE0A6200F932E6 /* SideMenuViewController.swift in Sources */,
 				980BA89D22CDF87E00F932E6 /* ApplicationUtility.swift in Sources */,

@@ -10,13 +10,30 @@ import UIKit
 import XLPagerTabStrip
 
 class ArticlesViewController: UITableViewController {
+    
+    var viewModel: ArticlesViewModel = ArticlesViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindToViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //TODO: Add activity indicator when API is executed
+    func bindToViewModel() {
+        viewModel.reloadData = {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
 }
@@ -24,18 +41,20 @@ class ArticlesViewController: UITableViewController {
 private typealias TableView = ArticlesViewController
 extension TableView {
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Article")
-        cell.contentView.backgroundColor = UIColor.white
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Articles", for: indexPath) as! ArticleCell
+        if let article = viewModel.getArticle(atIndex: indexPath.row) {
+            cell.setup(article)
+        }
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45.0
     }
     
 }
