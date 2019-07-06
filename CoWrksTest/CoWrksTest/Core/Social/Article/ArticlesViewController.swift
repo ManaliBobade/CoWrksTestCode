@@ -20,19 +20,21 @@ class ArticlesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.getData()
+        //TODO: Every time view appears empty previous data
+        getArticles()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //TODO: Add activity indicator when API is executed
     func bindToViewModel() {
         viewModel.reloadData = {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.didFinishGettingData()
         }
     }
     
@@ -55,6 +57,40 @@ extension TableView {
             cell.setup(article)
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //Will scroll past the last cell
+        if indexPath.row + 1 == viewModel.numberOfRows {
+            getMoreArticles()
+        }
+    }
+    
+}
+
+private typealias Pagination = ArticlesViewController
+extension Pagination {
+    
+    //TODO: Add activity indicator when API is executed
+    func getArticles() {
+        let dataReset = viewModel.getData()
+        //Pagination state is reset. Show on UI
+        if dataReset {
+            tableView.reloadData()
+        }
+    }
+    
+    func getMoreArticles() {
+        //Show pagination activity on UI
+        tableView.tableFooterView?.isHidden = false
+        viewModel.getMoreData()
+    }
+    
+    func didFinishGettingData() {
+        DispatchQueue.main.async {
+            self.tableView.tableFooterView?.isHidden = true
+            self.tableView.reloadData()
+        }
     }
     
 }

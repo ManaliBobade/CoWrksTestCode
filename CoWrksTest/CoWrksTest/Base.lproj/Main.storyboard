@@ -233,6 +233,20 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <view key="tableFooterView" hidden="YES" contentMode="scaleToFill" id="gIy-qd-zqc" userLabel="tablefooter">
+                            <rect key="frame" x="0.0" y="238" width="375" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="34P-zE-naZ">
+                                    <rect key="frame" x="178" y="-3" width="20" height="20"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="34P-zE-naZ" firstAttribute="centerX" secondItem="gIy-qd-zqc" secondAttribute="centerX" id="SVW-E9-gFQ"/>
+                                <constraint firstItem="34P-zE-naZ" firstAttribute="centerY" secondItem="gIy-qd-zqc" secondAttribute="centerY" constant="-5" id="npN-0w-wbn"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Articles" rowHeight="200" id="30V-HE-yM3" customClass="ArticleCell" customModule="CoWrksTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="38" width="375" height="200"/>

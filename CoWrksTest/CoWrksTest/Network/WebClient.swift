@@ -20,7 +20,7 @@ class WebClient : NSObject {
     //Declare init as private for true singleton
     static let sharedWebClient = WebClient()
     
-    func getFeed(successHandler:@escaping GetFeedSuccessClosure, failureHandler:@escaping GetFeedFailureClosure) {
+    func getFeed(offset: Int, successHandler:@escaping GetFeedSuccessClosure, failureHandler:@escaping GetFeedFailureClosure) {
         //TODO: Ideally feed should be fetched page wise. Page number should go as parameter
         Alamofire.request(AlamofireRouter.getFeed(parameters: nil)).responseArray(keyPath: "data") {
             (response: DataResponse<[Article]>) in
