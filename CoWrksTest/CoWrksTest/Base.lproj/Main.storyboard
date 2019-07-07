@@ -84,27 +84,30 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-6r-xgy" userLabel="bell">
-                                        <rect key="frame" x="316.33333333333331" y="3" width="58.666666666666686" height="44"/>
+                                        <rect key="frame" x="313.33333333333331" y="3" width="58.666666666666686" height="44"/>
                                         <state key="normal" image="bell"/>
                                     </button>
-                                    <searchBar userInteractionEnabled="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="CoWrks Ecoworld" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-xo-hnp">
-                                        <rect key="frame" x="58.666666666666657" y="-4" width="257.66666666666674" height="56"/>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="CoWrks Ecoworld, Bengaluru" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYw-55-Mko">
+                                        <rect key="frame" x="56.333333333333343" y="10" width="262.33333333333326" height="30"/>
+                                        <color key="backgroundColor" white="0.1800889488723543" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.81317816840277779" alpha="0.82435252568493156" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="3m0-pY-evt"/>
-                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="leading" secondItem="Sky-El-miA" secondAttribute="trailing" id="ETb-eD-diM"/>
                                     <constraint firstItem="VrW-6r-xgy" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="MOg-dm-vgB"/>
-                                    <constraint firstItem="VrW-6r-xgy" firstAttribute="leading" secondItem="5Sb-xo-hnp" secondAttribute="trailing" id="Nc2-pg-057"/>
-                                    <constraint firstAttribute="trailing" secondItem="VrW-6r-xgy" secondAttribute="trailing" id="SLx-iM-qnN"/>
+                                    <constraint firstAttribute="trailing" secondItem="VrW-6r-xgy" secondAttribute="trailing" constant="3" id="SLx-iM-qnN"/>
+                                    <constraint firstItem="oYw-55-Mko" firstAttribute="centerX" secondItem="PC8-2t-z2Q" secondAttribute="centerX" id="W3e-l4-gVf"/>
                                     <constraint firstItem="Sky-El-miA" firstAttribute="leading" secondItem="PC8-2t-z2Q" secondAttribute="leading" id="Wpd-Gv-v7F"/>
-                                    <constraint firstItem="5Sb-xo-hnp" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="Zmi-Ao-n8R"/>
                                     <constraint firstItem="VrW-6r-xgy" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.9" id="brr-FO-XAX"/>
+                                    <constraint firstItem="oYw-55-Mko" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="gYM-fL-3Jz"/>
                                     <constraint firstItem="Sky-El-miA" firstAttribute="height" secondItem="PC8-2t-z2Q" secondAttribute="height" multiplier="0.9" id="hNl-kY-dfM"/>
                                     <constraint firstItem="VrW-6r-xgy" firstAttribute="width" secondItem="VrW-6r-xgy" secondAttribute="height" multiplier="4:3" id="hhE-it-lla"/>
                                     <constraint firstItem="Sky-El-miA" firstAttribute="centerY" secondItem="PC8-2t-z2Q" secondAttribute="centerY" id="rW0-12-wt4"/>
+                                    <constraint firstItem="oYw-55-Mko" firstAttribute="width" secondItem="PC8-2t-z2Q" secondAttribute="width" multiplier="0.7" id="sdN-y5-eZM"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-9M-iXw" userLabel="botom view">
@@ -122,7 +125,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.14000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rmz-gK-fZ1" firstAttribute="leading" secondItem="6l1-Hs-Vbc" secondAttribute="leading" id="0Zl-jd-pVu"/>
                             <constraint firstItem="PC8-2t-z2Q" firstAttribute="trailing" secondItem="6l1-Hs-Vbc" secondAttribute="trailing" id="7Ft-iY-ANY"/>
@@ -139,7 +142,7 @@
                         <viewLayoutGuide key="safeArea" id="6l1-Hs-Vbc"/>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="EdD-WZ-9UR" id="iYx-gp-vah"/>
+                        <outlet property="searchDisplayController" destination="xoS-8V-kS0" id="DnV-Fs-7Ec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FX-oM-Vx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,6 +152,14 @@
                         <outlet property="searchContentsController" destination="10W-Hx-nev" id="Gox-KQ-Jof"/>
                         <outlet property="searchResultsDataSource" destination="10W-Hx-nev" id="uNN-Kk-mNd"/>
                         <outlet property="searchResultsDelegate" destination="10W-Hx-nev" id="fVl-DV-a00"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="xoS-8V-kS0">
+                    <connections>
+                        <outlet property="delegate" destination="10W-Hx-nev" id="E5p-GT-EbC"/>
+                        <outlet property="searchContentsController" destination="10W-Hx-nev" id="tCB-Pg-7nF"/>
+                        <outlet property="searchResultsDataSource" destination="10W-Hx-nev" id="1oo-CK-Lbk"/>
+                        <outlet property="searchResultsDelegate" destination="10W-Hx-nev" id="AWM-8q-D2I"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -179,8 +190,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OSu-KU-PrB" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="27.333333333333332"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="gJq-NZ-NmW"/>
                                 </constraints>
@@ -194,15 +205,15 @@
                                 <cells/>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RW-WN-CcD">
-                                <rect key="frame" x="0.0" y="27.333333333333314" width="375" height="575"/>
+                                <rect key="frame" x="0.0" y="30" width="375" height="572.33333333333337"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.14000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OSu-KU-PrB" firstAttribute="trailing" secondItem="Hc2-cc-BOS" secondAttribute="trailing" id="K0Y-k9-FN5"/>
                             <constraint firstItem="7RW-WN-CcD" firstAttribute="top" secondItem="OSu-KU-PrB" secondAttribute="bottom" id="azc-uh-hkW"/>
                             <constraint firstItem="OSu-KU-PrB" firstAttribute="leading" secondItem="Hc2-cc-BOS" secondAttribute="leading" id="b7L-D5-uDC"/>
-                            <constraint firstItem="OSu-KU-PrB" firstAttribute="height" secondItem="LJB-jH-vOU" secondAttribute="height" multiplier="0.04" priority="999" id="fvR-kd-X6T"/>
+                            <constraint firstItem="OSu-KU-PrB" firstAttribute="height" secondItem="LJB-jH-vOU" secondAttribute="height" multiplier="0.05" priority="999" id="fvR-kd-X6T"/>
                             <constraint firstItem="7RW-WN-CcD" firstAttribute="leading" secondItem="Hc2-cc-BOS" secondAttribute="leading" id="mVK-wn-w8C"/>
                             <constraint firstItem="Hc2-cc-BOS" firstAttribute="bottom" secondItem="7RW-WN-CcD" secondAttribute="bottom" id="sYa-d0-bIm"/>
                             <constraint firstItem="7RW-WN-CcD" firstAttribute="trailing" secondItem="Hc2-cc-BOS" secondAttribute="trailing" id="yb4-fM-Cka"/>
@@ -227,7 +238,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="BIo-8n-lyw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.83440448178185356" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="kBW-Cg-OB7" userLabel="tableheader">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -389,10 +400,11 @@
         <scene sceneID="owo-Iw-Tdg">
             <objects>
                 <tabBarController id="PkL-qL-lRw" customClass="HomeViewController" customModule="CoWrksTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uN4-na-5hB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="uN4-na-5hB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
